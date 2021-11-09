@@ -10,20 +10,20 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 - Projects status :
+ 
+Project 1 : Inhale Exhale App       ; DONE ✔️
 
-Project 1 : Inhale Exhale App ; DONE ✔️
+Project 2 : New Year Countdown      ; DONE ✔️
 
-Project 2 : New Year Countdown ; DONE ✔️
+Project 3 : Video Loader            ; ONGOING 🟡
 
-Project 3 : Video Loader ; ONGOING 🟡
+Project 4 : Infinite Message        ; NOT STARTED ❌
 
-Project 4 : Infinite Message ; NOT STARTED ❌
+Project 5 : Music Loader            ; ONGOING 🟡
 
-Project 5 : Music Loader ; ONGOING 🟡
+Project 6 : Hanged Man              ; ONGOING 🟡
 
-Project 6 : Hanged Man ; ONGOING 🟡
-
-Project 7 : Brick Breaker (*) ; NOT STARTED ❌
+Project 7 : Brick Breaker (*)       ; NOT STARTED ❌
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
