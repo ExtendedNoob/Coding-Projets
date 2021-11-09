@@ -1,20 +1,29 @@
 # Coding-Projets
-6 Schools Project.
+***6 Schools Project.***
 
-Replit Account, You will find the project, have the code and even test them! : https://replit.com/@FrederickSorel
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Avancement on the projects : https://trello.com/b/xZeV9HRr/projet-prog 
+- *Replit Account, You will find the project, have the code and even test them! :* `https://replit.com/@FrederickSorel `
 
-Project 1 : Inhale Exhale App
+- *Avancement on the projects :* `https://trello.com/b/xZeV9HRr/projet-prog `
 
-Project 2 : New Year Countdown
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- **Projects** :
 
-Project 3 : Video Loader
+Project 1 : Inhale Exhale App 
 
-Project 4 : Infinite Message
+Project 2 : New Year Countdown 
 
-Project 5 : Music Loader
+Project 3 : Video Loader 
+
+Project 4 : Infinite Message 
+
+Project 5 : Music Loader 
 
 Project 6 : Hanged Man
 
-Project 7 : Brick Breaker (*)
+Project 7 : Brick Breaker (*) 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![PRofile pIc](https://user-images.githubusercontent.com/93956198/140847402-0b5dfbf9-b7f0-4729-aa45-74cac18fa2ec.jpg)
