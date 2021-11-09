@@ -3,9 +3,9 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- *Replit Account, You will find the project, have the code and even test them! :* `https://replit.com/@FrederickSorel `
+- *Replit Account, You will find the project, have the code and even test them! :* ` https://replit.com/@FrederickSorel `
 
-- *Avancement on the projects :* `https://trello.com/b/xZeV9HRr/projet-prog `
+- *Avancement on the projects :* ` https://trello.com/b/xZeV9HRr/projet-prog `
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - **Projects** :
