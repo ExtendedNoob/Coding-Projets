@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://kit.fontawesome.com/fae5a97603.js" crossorigin="anonymous">
+
+	</script>
+
+	<!-- Name CSS file to 'index.css'. -->
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+	<h1>🗿 Totaly not a Rick Roll 🗿</h1>
+  
+<!-- Make sure that the video is downloaded and saved in a file named 'videos' and change the name as whatever you set it as. -->
+	<video src="./videos/RickRoll.mp4" id="video" class="ecran" poster="./img/poster.png"></video>
+
+	<div class="controles">
+		<button class="btn" id="play">
+			<i class="fas fa-play" fa-2x></i> 
+		</button>
+		<button class="btn" id="stop">
+			<i class="fas fa-stop" fa-2x></i> 
+		</button>
+		<input type="range" id="progres" min="0" max="100" step="0.1" value="0" class="funny">
+		<span class="etampe-temps" id="etampe-temps">00:00</span>
+	</div>
+
+  <!-- Name JS file to 'index.js'. -->
+	<script src="index.js"></script>
+
+</body>
+
+</html>
