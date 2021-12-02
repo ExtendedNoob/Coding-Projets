@@ -1,1 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<!-- game css -->
+	<style>
+		body {
+			color: lightgray;
+			font-size: 28px;
+			font-family: 'Source Code Pro', monospace;
+			font-weight: 700;
+		}
+
+		#container {
+			width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#board {
+			width: 900px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			text-align: center;
+			font-size: 48px;
+			min-height: 60px;
+
+		}
+
+		#gallows {
+			float: left;
+			width: 450px;
+			text-align: center;
+			min-height: 280px;
+		}
+
+		#alphabet {
+			float: left;
+			width: 450px;
+			text-align: center;
+			min-height: 280px;
+		}
+
+		.letter {
+			width: 28px;
+			height: 30px;
+			text-align: center;
+			padding: 6px;
+			margin: 5px;
+			border: 3px solid gray;
+			float: left;
+			cursor: pointer;
+			border-radius: 15px;
+		}
+
+		.letter:hover {
+			background-color: #222222;
+			color: whitesmoke;
+			border: 3px solid white;
+		}
+
+		.reset {
+			color: #32CD32;
+			cursor: pointer;
+			font-size: 44px;
+
+		}
+
+		.reset:hover {
+			color: #7CFC00
+		}
+	</style>
+
+
+	<!-- background css -->
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body {
+			font-family: 'Exo', sans-serif;
+		}
+
+
+		.context {
+			width: 100%;
+			position: absolute;
+			top: 50vh;
+
+		}
+
+		.context h1 {
+			text-align: center;
+			color: #fff;
+			font-size: 50px;
+		}
+
+
+		.area {
+			background: #4e54c8;
+			background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+			width: 100%;
+			height: 100vh;
+
+
+		}
+
+		.circles {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.circles li {
+			position: absolute;
+			display: block;
+			list-style: none;
+			width: 20px;
+			height: 20px;
+			background: rgba(255, 255, 255, 0.2);
+			animation: animate 25s linear infinite;
+			bottom: -150px;
+
+		}
+
+		.circles li:nth-child(1) {
+			left: 25%;
+			width: 80px;
+			height: 80px;
+			animation-delay: 0s;
+		}
+
+
+		.circles li:nth-child(2) {
+			left: 10%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 2s;
+			animation-duration: 12s;
+		}
+
+		.circles li:nth-child(3) {
+			left: 70%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 4s;
+		}
+
+		.circles li:nth-child(4) {
+			left: 40%;
+			width: 60px;
+			height: 60px;
+			animation-delay: 0s;
+			animation-duration: 18s;
+		}
+
+		.circles li:nth-child(5) {
+			left: 65%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 0s;
+		}
+
+		.circles li:nth-child(6) {
+			left: 75%;
+			width: 110px;
+			height: 110px;
+			animation-delay: 3s;
+		}
+
+		.circles li:nth-child(7) {
+			left: 35%;
+			width: 150px;
+			height: 150px;
+			animation-delay: 7s;
+		}
+
+		.circles li:nth-child(8) {
+			left: 50%;
+			width: 25px;
+			height: 25px;
+			animation-delay: 15s;
+			animation-duration: 45s;
+		}
+
+		.circles li:nth-child(9) {
+			left: 20%;
+			width: 15px;
+			height: 15px;
+			animation-delay: 2s;
+			animation-duration: 35s;
+		}
+
+		.circles li:nth-child(10) {
+			left: 85%;
+			width: 150px;
+			height: 150px;
+			animation-delay: 0s;
+			animation-duration: 11s;
+		}
+
+
+
+		@keyframes animate {
+
+			0% {
+				transform: translateY(0) rotate(0deg);
+				opacity: 1;
+				border-radius: 0;
+			}
+
+			100% {
+				transform: translateY(-1000px) rotate(720deg);
+				opacity: 0;
+				border-radius: 50%;
+			}
+
+		}
+
+		.no-stick-man {
+			position: absolute;
+			left: 350px;
+			top: 250px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		}
+
+		.no-stick-man2 {
+			position: absolute;
+			left: 350px;
+			top: 300px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		}
+
+    		.epic {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		}
+
+    .villager {
+      position: absolute;
+		  left: 400px;
+		  top: 400px;
+
+	</style>
+
+</head>
+<!-- html -->
+
+<body>
+
+	<h2 align="center" class="epic">Epic Hanged Man Pro</h2>
+
+	<hr>
+
+	<h3 class="no-stick-man">Mr Stickman went in vacation.</h3>
+	<h3 class="no-stick-man2">After 9 errors its game over!</h3>
+
+  <img src="https://c.tenor.com/CupO_nJdZTgAAAAj/villager-taunt.gif" alt="villager" class="villager">
+
+	<!-- game things -->
+
+	<div id="game">
+		<div id="container">
+			<div id="board"></div>
+			<div id="gallows">
+				<img src="https://s13.postimg.org/q4q1i97pj/image.jpg"alt=""/>
+    </div>
+    <div id="alphabet"></div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+    <!-- Javascript -->
+<script>
+  var number=Math.floor(Math.random() * 41);
+var password=["The pen is mightier than the sword","When in Rome do as the Romans","There is no place like home","Discretion is the greater part of valor","Actions speak louder than words","Talk is cheap show me the code","A friend in need is a friend indeed","Bazinga","Cant guess this one","Chair","Orange","Office","ambidextrous","Shuffle","Animal","jaguar","Hawaii","London","Fulfill","Navigation system ready","Work work","deliberate","nice","kind","good","Checking if the passwords repeat","Show must go on","Jeopardy","Hanged Man","Javascript","Showcase","Money","Puppy","Love","Lust","Faith","Dreams","Dragonborn","Perfect","Pool","Farm","Pneumonoultramicroscopicsilicovolcanoconiosis"];
+
+
+var failures=0;
+password[number]=password[number].toUpperCase();
+
+
+var password2="";
+
+for(i=0;i<password[number].length;i++)
+{
+    if(password[number].charAt(i)==" ")
+    {
+        password2 = password2 + " ";
+    }
+    else
+    {
+        password2 = password2+"-";
+    }
+}
+
+function print_password()
+{
+document.getElementById("board").innerHTML=password2;
+}
+
+
+window.onload = start;
+var letters = new Array(26);
+letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+function start(){
+    var div_content="";
+    for(i=0;i<26;i++)
+    {
+        var element="let"+i;
+        div_content= div_content + '<div class="letter" onclick="check('+i+')"id="'+element+'">'+letters[i]+'</div>';
+        if((i+1)%7==0)div_content=div_content+'<div style="clear:both;"></div>'
+    }
+    document.getElementById("alphabet").innerHTML=div_content;
+
+    print_password();
+}
+
+String.prototype.setchar = function(position, char)
+{
+if(position>this.length-1)return this.toString();
+else return this.substr(0,position)+char+this.substr(position+1);
+}
+
+function check(nr)
+{
+    var hit = false;
+    for(i=0;i<password.length;i++)
+    {
+        if(password[number].charAt(i)==letters[nr])
+        {
+          password2=password2.setchar(i,letters[nr]);
+          hit=true;
+        }
+    }
+
+    if(hit==true)
+    {
+        var element="let"+nr;
+        document.getElementById(element).style.background = "#003300";
+        document.getElementById(element).style.color = "#00C000";
+        document.getElementById(element).style.border = "3px solid #00C000";
+        document.getElementById(element).style.cursor = "default";
+        print_password();
+    }
+    else
+    {
+        var element="let"+nr;
+        document.getElementById(element).style.background = "#330000";
+        document.getElementById(element).style.color = "#C00000";
+        document.getElementById(element).style.border = "3px solid #C00000";
+        document.getElementById(element).style.cursor = "default";
+        document.getElementById(element).setAttribute("onclick",";");
+       // how many failures
+        failures++;
+       // var picture="img/s"+failures+".jpg";
+      switch(failures)
+          {
+        case 0:
+         document.getElementById("gallows").innerHTML='<img src="https://s13.postimg.org/q4q1i97pj/image.jpg"alt=""/>';
+          break;
+        case 1:
+         document.getElementById("gallows").innerHTML='<img src="https://s22.postimg.org/dfixj9prl/image.jpg"alt=""/>'; 
+          break;
+        case 2:
+          document.getElementById("gallows").innerHTML='<img src="https://s1.postimg.org/fhas0ycb3/image.jpg"alt=""/>';
+          break;
+        case 3:
+          document.getElementById("gallows").innerHTML='<img src="https://s9.postimg.org/c4smrhfkf/image.jpg"alt=""/>';
+          break;
+        case 4:
+          document.getElementById("gallows").innerHTML='<img src="https://s10.postimg.org/4zgd0tk8p/image.jpg"alt=""/>';
+          break;
+        case 5:
+          document.getElementById("gallows").innerHTML='<img src="https://s9.postimg.org/6lgl3h7xb/image.jpg"alt=""/>';
+          break;
+        case 6:
+          document.getElementById("gallows").innerHTML='<img src="https://s4.postimg.org/d23sva099/image.jpg"alt=""/>';
+          break;
+        case 7:
+          document.getElementById("gallows").innerHTML='<img src="https://s13.postimg.org/8lbpgpaw7/image.jpg"alt=""/>';
+          break;
+        case 8:
+          document.getElementById("gallows").innerHTML='<img src="https://s16.postimg.org/bmqga1c39/image.jpg"alt=""/>';
+          break;
+        case 9:
+          document.getElementById("gallows").innerHTML='<img src="https://s21.postimg.org/9juyjyznr/image.jpg"alt=""/>';
+          break;
+          }
+    }
+//win
+    if(password[number]==password2)
+    {
+        document.getElementById("alphabet").innerHTML="Congratulations, You Won! Your passsword was: "+password[number]+'<br/><br/><span class="reset" onclick="location.reload()">Wanna try again?</span>';
+    }
+//lose
+     if(failures>=9)
+     {
+     document.getElementById("alphabet").innerHTML="You lost this time :( The password was: "+password[number]+'<br/><br/><span class="reset" onclick="location.reload()">Wanna try again?</span>';
+     }
+}
+
+</script>
+
+</body>
+</html>
