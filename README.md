@@ -20,7 +20,7 @@ Project 1 : Inhale Exhale App       ; DONE ✔️
 Project 2 : New Year Countdown      ; DONE ✔️
 Project 3 : Video Loader            ; DONE ✔️
 Project 4 : Infinite Message        ; DONE ✔️
-Project 5 : Music Loader            ; ONGOING 🟡
+Project 5 : Music Loader            ; DONE ✔️
 Project 6 : Hanged Man              ; ONGOING 🟡
 Project 7 : Brick Breaker (*)       ; NOT STARTED ❌
 
