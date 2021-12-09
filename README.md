@@ -1,14 +1,12 @@
-# Coding-Projets
-***Schools Project.***
+# Schools Project
 
 ![image](https://user-images.githubusercontent.com/93956198/142100344-b94f5b86-81d0-4b34-bb8d-f7aba2195135.png)
 
-<hr>
+## General Information
 
-- *Replit Account, You will find the project, have the code and even test them! :* ` https://replit.com/@FrederickSorel `
-
-- *Avancement on the projects :* ` https://trello.com/b/xZeV9HRr/projet-prog `
-
+* [Replit Account](https://replit.com/@FrederickSorel), You will find the project, have the code and even test them!
+* [Avancement on the projects](https://trello.com/b/xZeV9HRr/projet-prog) (Trello)
+ 
 <hr>
 
 ```
