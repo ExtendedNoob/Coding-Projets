@@ -14,7 +14,7 @@
 ```
 - Projects status :
  
- 1. School Pojects 
+ 1. School Projects
  
 Project 1 : Inhale Exhale App       ; DONE ✔️
 Project 2 : New Year Countdown      ; DONE ✔️
