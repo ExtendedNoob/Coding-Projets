@@ -1,41 +1,69 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>replit</title>
-	<link href="index.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-	<script src="https://kit.fontawesome.com/fae5a97603.js" crossorigin="anonymous">
 
-	</script>
+<style>
+  html,
+body,
+#container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+#myElement {
+    height: 100vh !important;
+}
+body {
+    height: 100vh;
+}
+#container {
+    position: absolute;
+    text-align: center
+}
 
-	<!-- Name CSS file to 'index.css'. -->
-	<link rel="stylesheet" href="./css/index.css">
+video {
+    outline: 0
+}
+</style>
+
 </head>
-
 <body>
-
-	<h1>🗿 Totaly not a Rick Roll 🗿</h1>
-  
-<!-- Make sure that the video is downloaded and saved in a file named 'videos' and change the name as whatever you set it as. -->
-	<video src="./videos/RickRoll.mp4" id="video" class="ecran" poster="./img/poster.png"></video>
-
-	<div class="controles">
-		<button class="btn" id="play">
-			<i class="fas fa-play" fa-2x></i> 
-		</button>
-		<button class="btn" id="stop">
-			<i class="fas fa-stop" fa-2x></i> 
-		</button>
-		<input type="range" id="progres" min="0" max="100" step="0.1" value="0" class="funny">
-		<span class="etampe-temps" id="etampe-temps">00:00</span>
-	</div>
-
-  <!-- Name JS file to 'index.js'. -->
-	<script src="index.js"></script>
-
+  <div class='video'>
+  <script src="https://use.fontawesome.com/20603b964f.js"></script>
+  <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+  <script type="text/javascript">
+    jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
+    // jwplayer.key = 'ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=';
+  </script>
+  <div id="myElement"></div>
+  <script type="text/javascript">
+    jwplayer("myElement").setup({
+      image: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      //aspectratio: "16:9",
+      // width: '100%',
+      height: window.innerHeight,
+      autostart: false,
+      file : 'https://vjs.zencdn.net/v/oceans.mp4',
+      title: 'Oceans',
+      description: 'etoski on Codepen',
+      aboutlink: 'https://www.jwplayer.com/',
+      tracks:[{"file":"<?php echo $cc; ?>","label":"Indonesia","kind":"captions","default":"true"}],
+      captions: {color: '#ffb800',fontSize: 30,backgroundOpacity: 0},
+      sharing: {
+        sites: ['facebook','twitter','tumblr','googleplus',{icon: '//support-static.jwplayer.com/images/awesome.svg', src: 'http://www.jwplayer.com/?', label:'jwplayer'}],
+        code: encodeURI("<iframe src='<?php echo $sharing;?>' width='480' height='320'></iframe>"),
+        link: "<?php echo $sharing;?>"
+      }
+    })
+  </script>
+</div>
 </body>
-
 </html>
