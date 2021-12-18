@@ -20,11 +20,12 @@ Project 3 : Video Loader            ; DONE ✔️
 Project 4 : Infinite Message        ; DONE ✔️
 Project 5 : Music Loader            ; DONE ✔️
 Project 6 : Hanged Man              ; DONE ✔️
-Project 7 : Brick Breaker (*)       ; ONGOING 🟡
+Project 7 : Brick Breaker           ; ONGOING 🟡
 
  2. Personal Projects
  
  Project 1 : Multiplayer Chess Game ; ONGOING 🟡
+ Project 2 : Clicker Game           ; ONGOING 🟡
 
 ```
 
