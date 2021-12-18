@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -10,6 +10,123 @@
 	<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="index.css">
 	<title>Relaxation</title>
+
+  <!-- style -->
+    <style>
+      /* font-family: 'Scheherazade New', serif; */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url(https://i.ytimg.com/vi/xwQ5YpcCDHk/maxresdefault.jpg)
+	no-repeat center center/cover;
+	min-height: 100vh;
+	color: #ffffff;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Scheherazade New', serif;
+	letter-spacing: 5px;
+	margin: 0;
+}
+
+.contenant {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	height: 300px;
+	width: 300px;
+	position: relative;
+	transform: scale(1);
+}
+
+.cercle {
+	background-color: #081529;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.gradient-cercle {
+	background: conic-gradient(
+		#88d3eb 0%,
+		#65a0b3 40%,
+		#ffffff 40%,
+		#ffffff 60%,
+		#1b7c99 60%,
+		#126983 100%
+	);
+	height: 320px;
+	width: 320px;
+	position: absolute;
+	z-index: -2;
+	border-radius: 50%;
+	top: -10px;
+	left: -10px;
+	box-shadow: 5px 5px 10px #0305297a;
+}
+
+.pointeur {
+	background-color: #ffffff;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	display: block;
+	box-shadow: 0px 3px 7px #0305297a;
+
+}
+
+.pointeur-contenant {
+	position: absolute;
+	top: -40px;
+	left: 140px;
+	width: 20px;
+	height: 190px;
+
+	animation: rotation 9s linear forwards infinite;
+	transform-origin: bottom center;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.contenant.grandir {
+	animation: grandir 3.6s linear forwards;
+}
+
+@keyframes grandir {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+.contenant.rapetisser {
+	animation: rapetisser 3.6s linear forwards;
+}
+
+@keyframes rapetisser {
+	from {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+    </style>
 </head>
 
 <body>
@@ -31,9 +148,34 @@
 		<div class="gradient-cercle"></div>
 
 	</div>
-  
-<script src="index.js"></script>
+
+  <!-- script -->
+    <script>
+            const contenant = document.getElementById('contenant');
+      const texte = document.getElementById('texte');
+
+      const tempsTotal = 9000;
+      const tempsInspirer = (tempsTotal / 5) * 2;
+      const tempsPause = tempsTotal / 5;
+
+      AnimationRespire();
+
+      function AnimationRespire() {
+        texte.innerText = 'Inspire! 😮';
+        contenant.className = 'contenant grandir';
+
+        setTimeout (() => {
+          texte.innerText = 'Pause... 😶';
+
+          setTimeout(() => {
+            texte.innerText = 'Expire! 😮‍💨';
+            contenant.className = 'contenant rapetisser';
+          }, tempsPause);
+        }, tempsInspirer);
+      }
+
+      setInterval(AnimationRespire, tempsTotal);
+    </script>
 
 </body>
 </html>
-
