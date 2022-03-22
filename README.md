@@ -1,3 +1,5 @@
+# Project discontinued
+
 # Schools Project
 
 ![image](https://user-images.githubusercontent.com/93956198/142100344-b94f5b86-81d0-4b34-bb8d-f7aba2195135.png)
